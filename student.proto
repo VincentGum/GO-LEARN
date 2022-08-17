@@ -1,0 +1,12 @@
+syntax = "proto3";
+package main;
+
+// 意思是输出到当前目录，解决「protoc-gen-go: program not found or is not executable」问题
+option go_package = "./;main";
+
+// this is a comment
+message Student {
+  string name = 1;
+  bool male = 2;
+  repeated int32 scores = 3;
+}
